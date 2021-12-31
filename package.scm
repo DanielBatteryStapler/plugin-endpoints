@@ -1,0 +1,27 @@
+(define-module (gnu packages daniel)
+	#:use-module (guix packages)
+	#:use-module (guix gexp)
+	#:use-module ((guix licenses) #:prefix license:)
+	#:use-module (guix git-download)
+	#:use-module (guix build-system meson)
+	#:use-module (gnu packages pkg-config)
+	#:use-module (gnu packages cmake)
+	#:use-module (gnu packages boost)
+	#:use-module (gnu packages tls)
+	#:use-module (gnu packages cpp)
+	#:use-module (gnu packages pretty-print))
+
+(package
+	(name "discordpp-plugin-endpoints")
+	(version "0.0")
+	(inputs '())
+	(native-inputs '())
+	(propagated-inputs '())
+	(source (local-file (dirname (current-filename)) #:recursive? #t))
+	(build-system meson-build-system)
+	(synopsis "Discord++: A Modularized C++ Library for the Discord API. Endpoints plugin")
+	(description
+		"A Modularized C++ Library for the Discord API")
+	(home-page "https://github.com/Discordpp/plugin-endpoints")
+	(license license:expat))
+
